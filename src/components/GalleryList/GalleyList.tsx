@@ -1,4 +1,4 @@
-
+import GalleryItem from "../GalleryItem/GalleryItem";
 
 function GalleryList() {
     
@@ -8,7 +8,7 @@ function GalleryList() {
           <h1>Gallery list</h1>
         </header>
 
-<p>galley pics</p>
+{GalleryItem}
       </div>
     );
 }
