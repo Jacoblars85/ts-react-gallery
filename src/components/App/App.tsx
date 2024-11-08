@@ -7,22 +7,22 @@ import './App.css';
 
 function App() {
 
-  const [gallery, setGallery] = useState([])
+  const [galleryList, setGalleryList] = useState([])
 
   useEffect(() => {
-    getGallery()
+    getGalleryList()
   }, [])
 
-  const getGallery = () => {
+  const getGalleryList = () => {
     axios({
       method: 'GET',
       url: '/gallery'
     })
       .then((response) => {
-        setGallery(response.data)
+        setGalleryList(response.data)
       })
       .catch((error) => {
-        console.log('getGallery fail:', error);
+        console.log('getGalleryList fail:', error);
       })
   }
 
@@ -36,7 +36,7 @@ function App() {
         <img src="images/goat_small.jpg"/>
         <img src="images/goat_stache.png"/>
 
-        <GalleryList />
+        <GalleryList galleryList={galleryList} getGalleryList={getGalleryList} />
       </div>
     );
 }
