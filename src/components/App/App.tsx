@@ -12,7 +12,20 @@ function App() {
   useEffect(() => {
     getGallery()
   }, [])
-  
+
+  const getGallery = () => {
+    axios({
+      method: 'GET',
+      url: '/gallery'
+    })
+      .then((response) => {
+        setGallery(response.data)
+      })
+      .catch((error) => {
+        console.log('getGallery fail:', error);
+      })
+  }
+
     return (
       <div>
         <header>
