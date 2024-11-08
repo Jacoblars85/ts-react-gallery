@@ -7,7 +7,15 @@ function GalleryList() {
         <h1>Gallery list</h1>
       </header>
 
-      {GalleryItem}
+      {gallery.map((pic) => {
+            return (
+            <div key={pic.id}>
+
+              <GalleryItem pic={pic} updateLike={updateLike}/>
+                
+            </div>
+            )
+          })}
     </div>
   );
 }
