@@ -7,7 +7,13 @@ function GalleryList() {
         <h1>Gallery list</h1>
       </header>
 
-      {GalleryItem_1.default}
+      {gallery.map(function (pic) {
+            return (<div key={pic.id}>
+
+              <GalleryItem_1.default pic={pic}/>
+                
+            </div>);
+        })}
     </div>);
 }
 exports.default = GalleryList;
