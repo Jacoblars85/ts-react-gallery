@@ -9,10 +9,10 @@ router.get('/', (req, res) => {
   ORDER BY "id";
 `
 pool.query(sqlQueryText)
-  .then((result) => {
+  .then((result: any) => {
       console.log('result', result.rows);
       res.send(result.rows);
-  }).catch((err) => {
+  }).catch((err: any) => {
       res.sendStatus(500);
       console.log('error in server get route', err);
   })
