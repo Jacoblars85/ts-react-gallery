@@ -8,7 +8,18 @@ router.put('/like/:id', (req, res) => {
 
 // GET /gallery
 router.get('/', (req, res) => {
-  // code here
+  const sqlQueryText = `
+  SELECT * FROM "gallery"
+  ORDER BY "id";
+`
+pool.query(sqlQueryText)
+  .then((result) => {
+      console.log('result', result.rows);
+      res.send(result.rows);
+  }).catch((err) => {
+      res.sendStatus(500);
+      console.log('error in server get route', err);
+  })
 });
 
 module.exports = router;
