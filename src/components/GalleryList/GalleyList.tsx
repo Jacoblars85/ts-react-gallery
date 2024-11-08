@@ -1,6 +1,8 @@
 import GalleryItem from "../GalleryItem/GalleryItem";
 
 function GalleryList() {
+
+
   return (
     <div>
       <header>
@@ -11,7 +13,7 @@ function GalleryList() {
             return (
             <div key={pic.id}>
 
-              <GalleryItem pic={pic} updateLike={updateLike}/>
+              <GalleryItem pic={pic} />
                 
             </div>
             )
