@@ -1,5 +1,8 @@
 function GalleryItem({ galleryItem }) {
 
+    console.log('galleryItem', galleryItem);
+    
+
     return (
       <div>
         <img src="images/goat_small.jpg"/>
