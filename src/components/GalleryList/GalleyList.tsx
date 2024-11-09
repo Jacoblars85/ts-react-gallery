@@ -1,6 +1,6 @@
 import GalleryItem from "../GalleryItem/GalleryItem";
 
-function GalleryList() {
+function GalleryList({ galleryList }) {
 
 
   return (
@@ -9,11 +9,11 @@ function GalleryList() {
         <h1>Gallery list</h1>
       </header>
 
-      {gallery.map((pic) => {
+      {galleryList.map((galleryItem) => {
             return (
             <div key={pic.id}>
 
-              <GalleryItem pic={pic} />
+              <GalleryItem galleryItem={galleryItem} />
                 
             </div>
             )
