@@ -7,7 +7,7 @@ import './App.css';
 
 function App() {
 
-  const [galleryList, setGalleryList] = useState([])
+  const [galleryList, setGalleryList] = useState([]);
 
   useEffect(() => {
     getGalleryList()
@@ -25,6 +25,9 @@ function App() {
         console.log('getGalleryList fail:', error);
       })
   }
+
+  console.log('galleryList in app', galleryList);
+  
 
     return (
       <div>
