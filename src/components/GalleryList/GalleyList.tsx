@@ -2,9 +2,6 @@ import GalleryItem from "../GalleryItem/GalleryItem";
 
 function GalleryList({ galleryList }) {
 
-    console.log('galleryList', galleryList);
-    
-
   return (
     <div>
       <header>
