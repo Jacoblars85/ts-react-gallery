@@ -9,14 +9,12 @@ function App() {
 
   const [galleryList, setGalleryList] = useState([]);
 
-  useEffect(() => {
-    getGalleryList()
-  }, [])
-
   const getGalleryList = () => {
+    console.log('am i getting');
+    
     axios({
       method: 'GET',
-      url: '/gallery'
+      url: '/api/gallery'
     })
       .then((response) => {
         setGalleryList(response.data)
@@ -25,6 +23,12 @@ function App() {
         console.log('getGalleryList fail:', error);
       })
   }
+
+  useEffect(() => {
+    getGalleryList()
+  }, [])
+
+
 
   console.log('galleryList in app', galleryList);
   
