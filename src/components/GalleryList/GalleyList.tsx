@@ -13,7 +13,7 @@ function GalleryList({ galleryList }) {
 
       {galleryList.map((galleryItem) => {
             return (
-            <div key={pic.id}>
+            <div key={galleryItem.id}>
 
               <GalleryItem galleryItem={galleryItem} />
                 
