@@ -9,6 +9,10 @@ function App() {
 
   const [galleryList, setGalleryList] = useState([]);
 
+  useEffect(() => {
+    getGalleryList()
+  }, [])
+
   const getGalleryList = () => {
     console.log('am i getting');
     
@@ -24,14 +28,7 @@ function App() {
       })
   }
 
-  useEffect(() => {
-    getGalleryList()
-  }, [])
-
-
-
   console.log('galleryList in app', galleryList);
-  
 
     return (
       <div>
