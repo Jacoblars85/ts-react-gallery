@@ -5,7 +5,7 @@ function GalleryItem({ galleryItem }) {
 
     return (
       <div>
-        <img src={galleryItem.pic}/>
+        <img src={galleryItem.url}/>
         {galleryItem.title}
       </div>
     );
