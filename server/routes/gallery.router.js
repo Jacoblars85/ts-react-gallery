@@ -14,6 +14,14 @@ router.get('/', function (req, res) {
 });
 // PUT /gallery/like/:id
 router.put('/like/:id', function (req, res) {
-    // code here
+    var sqlQueryText = "\n    UPDATE \"gallery\"\n    SET \"likes\" = \"likes\" + 1\n    WHERE \"id\" = ($1);\n    ";
+    var sqlValues = [req.params.id];
+    pool.query(sqlQueryText, sqlValues)
+        .then(function (result) {
+        res.sendStatus(200);
+        console.log('PUT successful');
+    }).catch(function (err) {
+        res.sendStatus(500);
+    });
 });
 module.exports = router;
