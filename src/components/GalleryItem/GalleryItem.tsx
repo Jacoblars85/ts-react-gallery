@@ -4,6 +4,7 @@ function GalleryItem({ galleryItem }) {
       <div>
         <img src={galleryItem.url}/>
         {galleryItem.title}
+        {galleryItem.description}
       </div>
     );
 }
