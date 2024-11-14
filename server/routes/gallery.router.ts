@@ -19,7 +19,22 @@ pool.query(sqlQueryText)
 
 // PUT /gallery/like/:id
 router.put('/like/:id', (req, res) => {
-  // code here
+  
+    const sqlQueryText = `
+    UPDATE "gallery"
+    SET "likes" = "likes" + 1
+    WHERE "id" = ($1);
+    `
+
+    const sqlValues = [req.params.id];
+
+    pool.query(sqlQueryText, sqlValues)
+    .then((result) => {
+        res.sendStatus(200);
+        console.log('PUT successful');
+    }).catch((err) => {
+        res.sendStatus(500);
+    })
 });
 
 module.exports = router;
