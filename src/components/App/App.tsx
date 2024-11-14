@@ -14,8 +14,6 @@ function App() {
   }, [])
 
   const getGalleryList = () => {
-    console.log('am i getting');
-    
     axios({
       method: 'GET',
       url: '/api/gallery'
