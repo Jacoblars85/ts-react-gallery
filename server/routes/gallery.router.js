@@ -6,7 +6,6 @@ router.get('/', function (req, res) {
     var sqlQueryText = "\n  SELECT * FROM \"gallery\"\n  ORDER BY \"id\";\n";
     pool.query(sqlQueryText)
         .then(function (result) {
-        console.log('result', result.rows);
         res.send(result.rows);
     }).catch(function (err) {
         res.sendStatus(500);
