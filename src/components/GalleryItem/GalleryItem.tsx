@@ -26,6 +26,10 @@ function GalleryItem({ galleryItem }) {
 
     return (
       <div>
+
+       <div onClick={togglePicture}>
+        {displayText()}
+       </div>
        
         {galleryItem.title}
 
