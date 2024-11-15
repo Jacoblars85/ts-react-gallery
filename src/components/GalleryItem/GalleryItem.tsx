@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from 'axios';
 
 function GalleryItem({ galleryItem }) {
   const [isPicture, setIsPicture] = useState(false);
@@ -41,7 +42,7 @@ function GalleryItem({ galleryItem }) {
 
       {galleryItem.title}
 
-      <button onClick={likePicture}>Like</button>
+      <button id={galleryItem.id} onClick={likePicture}>Like</button>
     </>
   );
 }
