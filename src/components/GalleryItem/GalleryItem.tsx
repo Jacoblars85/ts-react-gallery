@@ -4,6 +4,10 @@ function GalleryItem({ galleryItem }) {
 
     const [isPicture, setIsPicture] = useState(false)
 
+    const togglePicture = () => {
+        setIsPicture(!isPicture)
+      }
+
     return (
       <div>
         <img src={galleryItem.url}/>
