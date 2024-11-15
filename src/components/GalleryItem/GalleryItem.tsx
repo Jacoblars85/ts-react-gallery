@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from 'axios';
 
-function GalleryItem({ galleryItem }) {
+function GalleryItem({ galleryItem, getGalleryList }) {
   const [isPicture, setIsPicture] = useState(false);
 
   const togglePicture = () => {
@@ -29,7 +29,7 @@ function GalleryItem({ galleryItem }) {
         url: `/gallery/like/${picId}`,
         method: 'PUT'
       }).then((response) => {
-        getGallery();
+        getGalleryList();
       }).catch((error) =>{
         console.log(error, 'Error in updating gallery');
       })
