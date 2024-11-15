@@ -8,11 +8,27 @@ function GalleryItem({ galleryItem }) {
         setIsPicture(!isPicture)
       }
 
+      const displayText = () => {
+        if (isPicture) {
+          return (
+              <>
+{galleryItem.description}
+              </>
+          )
+        } else {
+          return (
+              <>
+ <img src={galleryItem.url}/>
+              </>
+          )
+        }
+      }
+
     return (
       <div>
-        <img src={galleryItem.url}/>
+       
         {galleryItem.title}
-        {galleryItem.description}
+
       </div>
     );
 }
