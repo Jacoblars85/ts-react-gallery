@@ -21,12 +21,27 @@ function GalleryItem({ galleryItem }) {
     }
   };
 
+  const likePicture = (e) => {
+    const picId = e.target.id
+    console.log('picid', picId);
+    axios({
+        url: `/gallery/like/${picId}`,
+        method: 'PUT'
+      }).then((response) => {
+        getGallery();
+      }).catch((error) =>{
+        console.log(error, 'Error in updating gallery');
+      })
+
+}
+
   return (
     <>
       <div onClick={togglePicture}>{displayText()}</div>
 
       {galleryItem.title}
-      <button>Like</button>
+
+      <button onClick={likePicture}>Like</button>
     </>
   );
 }
