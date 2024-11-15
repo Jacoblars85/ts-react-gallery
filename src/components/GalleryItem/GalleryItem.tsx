@@ -9,7 +9,9 @@ function GalleryItem({ galleryItem }) {
 
   const displayText = () => {
     if (isPicture) {
-      return <>{galleryItem.description}</>;
+      return <>
+      {galleryItem.description}
+      </>
     } else {
       return (
         <>
@@ -20,11 +22,11 @@ function GalleryItem({ galleryItem }) {
   };
 
   return (
-    <div>
+    <>
       <div onClick={togglePicture}>{displayText()}</div>
 
       {galleryItem.title}
-    </div>
+    </>
   );
 }
 
