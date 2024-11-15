@@ -1,7 +1,6 @@
 import GalleryItem from "../GalleryItem/GalleryItem";
 
 function GalleryList({ galleryList }) {
-
   return (
     <div>
       <header>
@@ -9,14 +8,12 @@ function GalleryList({ galleryList }) {
       </header>
 
       {galleryList.map((galleryItem) => {
-            return (
-            <div key={galleryItem.id}>
-
-              <GalleryItem galleryItem={galleryItem} />
-                
-            </div>
-            )
-          })}
+        return (
+          <div key={galleryItem.id}>
+            <GalleryItem galleryItem={galleryItem} />
+          </div>
+        );
+      })}
     </div>
   );
 }
