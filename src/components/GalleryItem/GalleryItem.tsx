@@ -26,6 +26,7 @@ function GalleryItem({ galleryItem }) {
       <div onClick={togglePicture}>{displayText()}</div>
 
       {galleryItem.title}
+      <button>Like</button>
     </>
   );
 }
