@@ -1,4 +1,8 @@
+import { useState } from 'react';
+
 function GalleryItem({ galleryItem }) {
+
+    const [isPicture, setIsPicture] = useState(false)
 
     return (
       <div>
