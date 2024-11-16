@@ -42,6 +42,7 @@ function GalleryItem({ galleryItem, getGalleryList }) {
 
       {galleryItem.title}
 
+      <p>{galleryItem.likes > 0 ? `${galleryItem.likes} people love this!` : `No people love this :(`}</p>
       <button id={galleryItem.id} onClick={likePicture}>Like</button>
     </>
   );
