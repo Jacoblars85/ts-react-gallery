@@ -3,10 +3,9 @@ import GalleryItem from "../GalleryItem/GalleryItem";
 function GalleryList({ galleryList, getGalleryList }) {
   return (
     <div>
-      <header>
-        <h1>Gallery list</h1>
-      </header>
 
+
+<div className="galleryListBox">
       {galleryList.map((galleryItem) => {
         return (
           <div key={galleryItem.id} className="galleryItemBox">
@@ -14,6 +13,7 @@ function GalleryList({ galleryList, getGalleryList }) {
           </div>
         );
       })}
+      </div>
     </div>
   );
 }
