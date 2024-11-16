@@ -5,3 +5,8 @@ img {
     margin-left: 25px;
     border: 1px solid black;
 }
+
+.galleryItemBox {
+    height: 350px;
+    width: 250px;
+}
