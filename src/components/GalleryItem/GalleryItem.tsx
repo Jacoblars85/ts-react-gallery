@@ -26,7 +26,7 @@ function GalleryItem({ galleryItem, getGalleryList }) {
     const picId = e.target.id
     console.log('picid', picId);
     axios({
-        url: `/gallery/like/${picId}`,
+        url: `/api/gallery/like/${picId}`,
         method: 'PUT'
       }).then((response) => {
         getGalleryList();
