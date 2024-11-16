@@ -39,8 +39,8 @@ function GalleryItem({ galleryItem, getGalleryList }) {
   return (
     <>
     {galleryItem.title}
-    
-      <div onClick={togglePicture}>{displayText()}</div>
+
+      <div className="toggledPic" onClick={togglePicture}>{displayText()}</div>
 
       <p>{galleryItem.likes > 0 ? `${galleryItem.likes} people love this!` : `No people love this :(`}</p>
       <button id={galleryItem.id} onClick={likePicture}>Like</button>
