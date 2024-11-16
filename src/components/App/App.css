@@ -20,6 +20,7 @@ img {
     /* padding-right: 35px; */
     margin-left: 25px;
     border: 1px solid black;
+    text-align: center;
 }
 
 .galleryItemBox {
