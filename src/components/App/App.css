@@ -24,6 +24,10 @@ img {
 }
 
 .galleryItemBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 350px;
     width: 250px;
 }
