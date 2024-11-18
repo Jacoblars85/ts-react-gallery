@@ -1,10 +1,10 @@
 import GalleryItem from "../GalleryItem/GalleryItem";
 
-function GalleryList({ galleryList, getGalleryList }) {
+function GalleryList({ galleryList, getGalleryList }: any) {
   return (
     <div>
       <div className="galleryListBox">
-        {galleryList.map((galleryItem) => {
+        {galleryList.map((galleryItem: any) => {
           return (
             <div key={galleryItem.id} className="galleryItemBox">
               <GalleryItem
