@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from 'axios';
 
-function GalleryItem({ galleryItem, getGalleryList }) {
+function GalleryItem({ galleryItem, getGalleryList }: any) {
   const [isPicture, setIsPicture] = useState(false);
 
   const togglePicture = () => {
@@ -22,7 +22,7 @@ function GalleryItem({ galleryItem, getGalleryList }) {
     }
   };
 
-  const likePicture = (e) => {
+  const likePicture = (e: any) => {
     const picId = e.target.id
     console.log('picid', picId);
     axios({
