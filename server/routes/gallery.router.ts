@@ -3,7 +3,7 @@ const router = express.Router();
 const pool = require('../modules/pool');
 
 // GET /gallery
-router.get('/', (req, res) => {
+router.get('/', (req: any, res: any) => {
   const sqlQueryText = `
   SELECT * FROM "gallery"
   ORDER BY "id";
@@ -18,7 +18,7 @@ pool.query(sqlQueryText)
 });
 
 // PUT /gallery/like/:id
-router.put('/like/:id', (req, res) => {
+router.put('/like/:id', (req: any, res: any) => {
   
     const sqlQueryText = `
     UPDATE "gallery"
@@ -29,10 +29,10 @@ router.put('/like/:id', (req, res) => {
     const sqlValues = [req.params.id];
 
     pool.query(sqlQueryText, sqlValues)
-    .then((result) => {
+    .then((result: any) => {
         res.sendStatus(200);
         console.log('PUT successful');
-    }).catch((err) => {
+    }).catch((err: any) => {
         res.sendStatus(500);
     })
 });
